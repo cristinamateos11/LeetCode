@@ -18,12 +18,13 @@ public class Exercise1 {
      * @param args
      */
     public static void main(String[] args) {
-        int[] nums = {1, 2, 3, 4, 5}; 
+        int[] nums = {5, 6, 3, 4, 5}; 
         Exercise1 exercise = new Exercise1();
         System.out.println("Contains duplicates: " + exercise.containsDuplicate(nums));
         System.out.println("Contains duplicates2: " + exercise.containsDuplicate2(nums));
     }    
 
+    // BUCLE FOR
     public boolean containsDuplicate(int[] nums) {
         for (int i=0; i<nums.length; i++) {
             System.out.println(nums[i] + " Bucle Externo");
@@ -37,11 +38,12 @@ public class Exercise1 {
         return false;
     }
 
+    // BUCLE FOR-EACH
     public boolean containsDuplicate2(int[] nums) {
         Set<Integer> seenNumbers = new HashSet<>();
         for (int num : nums) {
             if (seenNumbers.contains(num)) {
-                System.out.println(num + "Duplicate Number");
+                System.out.println(num + " Duplicate Number");
                 return true;
             }
             seenNumbers.add(num);
