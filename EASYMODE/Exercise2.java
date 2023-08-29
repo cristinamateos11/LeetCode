@@ -32,17 +32,27 @@ public class Exercise2 {
         scanner.close();
     }
 
+    /**
+     * Método que verifica si 2 cadenas son anagramas
+     * 
+     * @param firstString La primera cadena para comparar.
+     * @param secondString La segunda cadena para comparar.
+     * @return {@code true} si las cadenas son anagramas entre sí, {@code false} en caso contrario.
+     */
     public boolean isAnagram(String firstString, String secondString) {
         if (firstString.length() != secondString.length()) {
             return false;
         }
 
+        // convertimos las cadenas en un array de caracteres separados
         char[] firstStringArray = firstString.toCharArray();
         char[] secondStringArray = secondString.toCharArray();
 
+        // los ordenamos por orden alfabetico
         Arrays.sort(firstStringArray);
         Arrays.sort(secondStringArray);
 
+        // comparamos los arrays ya ordenados
         return Arrays.equals(firstStringArray, secondStringArray);
     }
 }
