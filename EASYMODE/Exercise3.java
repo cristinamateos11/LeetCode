@@ -12,7 +12,7 @@ public class Exercise3 {
     public static void main(String[] args) {
         Exercise3 exercise3 = new Exercise3();
         int[] nums = {2, 7, 11, 15};
-        int target = 9;
+        int target = 18;
         int[] result = exercise3.twoSum(nums, target);
         System.out.println("Indices de los números que suman el objetivo: [" + result[0] + ", " + result[1] + "]");
     }
